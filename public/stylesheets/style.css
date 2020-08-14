@@ -745,17 +745,19 @@ main {
 
 .landing-headline {
   font-size: 4em;
-  padding: 0.2em 0 0.5em 0; }
+  margin: -1.3em 0 0.5em 0; }
 
 .landing-catchphrase {
   font-size: 1.5em;
   color: #d1d1e9;
-  width: 75%;
-  padding: 0 0 2.5em 0; }
+  /* width: 75%;
+  padding: 0 0 2.5em 0;  */
+  margin-bottom: 2.5em;
+}
 
 .main-block-landing {
-  display: flex;
-  justify-content: space-evenly; }
+ height: calc(100vh - 200px);
+}
 
 .landing-cta {
   width: 200px;
@@ -778,9 +780,10 @@ main {
   display: flex; }
 
 .img-landing {
-  height: 60vh;
+  /* height: 60vh;
   margin: 10px;
-  padding-top: 2em; }
+  padding-top: 2em;  */
+}
 
 .profile-user-pic {
   width: 300px;
