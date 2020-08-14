@@ -1,0 +1,28 @@
+<h1 class="h1-vlad">My Profile</h1>
+
+<div class="profile-form-inputs">
+    <style type="text/css">
+        div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="profile-user-pic">
+        {{#if user.image }}
+        <img src="{{user.image}}" alt="" class="profile-user-pic-size">
+        {{/if}}
+    </div>
+    <div class="profile-input">
+        <p class="profile-input-txt">{{user.name}}</p>
+    </div>
+    <div class="profile-input">
+        <p class="profile-input-txt">{{user.lastname}}</p>
+    </div>
+    <div class="profile-input">
+        <p class="profile-input-txt">{{user.username}}</p>
+    </div>
+    <div class="profile-input">
+        <p class="profile-input-txt">{{user.email}}</p>
+    </div>
+    <a href="/users/profile/edit" class="sign-up-btn" id="profile-btn-edit">Edit my profile</a>
+</div>

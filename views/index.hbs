@@ -1,0 +1,68 @@
+<h1 class="h1-vlad">What will you learn today ?</h1>
+<div>
+    <form action="/index" method="GET" id="mathSearch">
+        <div>
+            {{!-- <label for="category">Category</label> --}}
+            <select name="category" id="category" class="select">
+                <option value="disabled selected" >Choose a category ↓</option>
+                {{#each category}}
+                <option value="{{this._id}}">{{this.category}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <label for="from"></label>
+        <input type="text" id="from" name="from" class="mathFrom" placeholder="from">
+        <label for="to"></label>
+        <input type="text" id="to" name="to" class="mathTo" placeholder="to">
+</div>
+<button id="mathSearch-button">Search</button>
+</form>
+{{#each finalArr}}
+<h2 class="h2-date-vlad">{{this.date}}</h2>
+{{!-- vignette --}}
+<div class="global-vignette-container">
+    {{#each this.courses}}
+    <div class="vignette-container">
+        <div class="vignette-container-inside">
+            <article class="teacher-vignette">
+                <a class="vignette-link" href="/{{this._id}}">
+                    <img class="vignette-main-image" src="{{this.image}}" alt="IMG">
+                    <div id="contain-teacher" class="cercle">
+                        <img class="cercle teacher-image" src="{{this.teacher.image}}" />
+                        <h4>{{this.teacher.name}} </h4>
+                        <h4>{{this.teacher.lastname}}</h4>
+                    </div>
+                    <div>
+                        <h3 class="date-vignette">{{formatDate this.date}}</h3>
+                    </div>
+            </article>
+            <div class="vignette-inside">
+                <div class="title-tag">
+                    <div>
+                        <h2>{{this.title}}</h2>
+                    </div>
+                    <div>
+                        <p class="tag">{{this.category.category}}</p>
+                    </div>
+                </div>
+                <p class="overflow-ellipsis vignette-description">{{this.description}}</p>
+                {{!-- <p>DATE: {{this.date}}</p> --}}
+                <div class="vignette-bottom">
+                    <div class="vignette-bottom-left">
+                        {{#each participants}}
+                        <img class="cercle" src="{{this.image}}" />
+                        {{/each}}
+                    </div>
+                    <div class="vignette-bottom-right">
+                        <h2>{{priceUpdate this.participants this.price}}$ / pers </h2>
+                        <p>{{placesLeft this.participants this.maxPeople}} places left</p>
+                    </div>
+                </div>
+                {{!-- <button><a href="/{{this._id}}">Discover this course</a></button> --}}
+            </div>
+        </div>
+    </div>
+    </a>
+    {{/each}}
+</div>
+{{/each}}
