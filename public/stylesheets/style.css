@@ -17,6 +17,8 @@ body {
     margin-bottom: 0;
   }
 
+  
+
 nav {
   font-family: "Roboto Slab", serif;
   color: #6246ea;
@@ -66,6 +68,12 @@ nav li a {
   text-decoration: none;
   color: inherit; }
 
+  nav li a:hover {
+  
+      text-decoration: none;
+    
+  }
+
 .right-button {
   background-color: #6246ea;
   border-radius: 6px;
@@ -76,6 +84,7 @@ nav li a {
 .right-button:hover {
   background-color: #d1d1e9;
   color: #6246ea;
+  text-decoration: none;
   transition: 0.3s; }
 
 .form-input {
@@ -744,16 +753,20 @@ main {
 
 .landing-headline {
   font-size: 4em;
-  margin: -1.2em 0 0.3em 0; }
+  margin: -1em 0 0.3em 0; }
 
 .landing-catchphrase {
   font-size: 1.5em;
   color: #d1d1e9;
-  width: 75%;
-  padding: 0 0 1.5em 0; }
+  margin: 0 auto 1.2em auto;
+}
 
 .main-block-landing {
   height: calc(100vh - 200px);
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .txt-container-landing {
@@ -787,11 +800,7 @@ main {
   justify-content: center
 }
 
-.img-landing {
-  /* height: 60vh;
-  margin: 10px; */
-  /* padding-top: 2em;  */
-}
+
 
 .profile-user-pic {
   width: 300px;
@@ -860,7 +869,8 @@ main {
   text-align: center;
   color: white;
   transition: 0.4s;
-  vertical-align: middle; }
+  /* vertical-align: middle;  */
+}
 
 .profile-form-inputs a:hover {
   background-color: #d1d1e9;
@@ -939,3 +949,67 @@ main {
   margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* RESPONSIVE  */
+
+.toShow  {
+  display: none;
+}
+
+.limitWidth {
+  width: 250px;
+  font-size:20px;
+}
+
+/* Bootstrap BTn */
+
+
+
+/* LANDING PAGE */
+@media only screen and (max-width: 1000px)  {
+
+  .container {
+    padding-right: 45px !important;
+    padding-left: 45px !important;
+  }
+  .toHide  {
+   display: none;
+  }
+
+  .toShow {
+    display: flex;
+  }
+  .landing-headline {
+ 
+    margin: 0.3em 0 ; }
+
+  .img-landing {
+    width: 80%;
+    margin: 50px auto 0 auto;
+    }
+
+  .txt-container-landing {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+
+ 
+
+  .main-block-landing {
+    height: calc(100vh -10px);
+   /* height: 100vh; */
+    /* background-color: red; */
+    width: 100%;
+    /* overflow: hidden; */
+  
+    
+ 
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
