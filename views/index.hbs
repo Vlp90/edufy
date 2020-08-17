@@ -1,22 +1,29 @@
-<h1 class="h1-vlad">What will you learn today ?</h1>
-<div>
-    <form action="/index" method="GET" id="mathSearch">
-        <div>
+
+
+
+<h1 class="h1-vlad">What will you  <span class="color-h1-landing"
+                style="color:#D1D1E9;">learn</span> today ?</h1>
+
+    <form class=action="/index" method="GET" id="mathSearch">
             {{!-- <label for="category">Category</label> --}}
-            <select name="category" id="category" class="select">
+            <select  name="category" id="category" class="select">
                 <option value="disabled selected" >Choose a category ↓</option>
                 {{#each category}}
                 <option value="{{this._id}}">{{this.category}}</option>
                 {{/each}}
             </select>
-        </div>
+       
+    
         <label for="from"></label>
         <input type="text" id="from" name="from" class="mathFrom" placeholder="from">
         <label for="to"></label>
         <input type="text" id="to" name="to" class="mathTo" placeholder="to">
-</div>
-<button id="mathSearch-button">Search</button>
+
+{{!-- <button id="mathSearch-button">Search</button> --}}
+<button class='btn btn-primary'>Search</button>
 </form>
+
+
 {{#each finalArr}}
 <h2 class="h2-date-vlad">{{this.date}}</h2>
 {{!-- vignette --}}
@@ -66,3 +73,4 @@
     {{/each}}
 </div>
 {{/each}}
+

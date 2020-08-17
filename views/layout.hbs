@@ -6,6 +6,8 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
   
+ <script src="https://use.fontawesome.com/47736f1ce8.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -30,7 +32,12 @@
 
 
   <nav class='d-flex align-items-center'>
-      <h1><a href="/"><img src="/images/logo.svg" id="logo"></a></h1>
+    {{#unless isLoggedIn}}
+      <a href="/"><img src="/images/logo.svg" id="logo"></a>
+      {{/unless}}
+        {{#if isLoggedIn}}
+      <a href="/index"><img src="/images/logo.svg" id="logo"></a>
+      {{/if}}
       <ul class='menu toHide'>
 
         {{#unless isLoggedIn}}
@@ -43,7 +50,7 @@
         <li><a href="/courses/student" class="nav-line">my courses</a></li>
         <li><a href="/courses/prof" class="nav-line">my teaching</a></li>
         <li><a href="/users/profile/" class="nav-line">profile</a></li>
-        <li><a href="/auth/logout" class="right-button">Log out</a></li>
+        <li><a href="/auth/logout" class="right-button"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
         {{/if}}
         {{user.currentUser}}
       </ul>
