@@ -1,3 +1,25 @@
+$(document).ready(function () {
+  let burger = document.getElementById("burger-menu");
+  let menuToggle = document.getElementById("burger-container");
+  burger.onclick = () => {
+    menuToggle.classList.toggle("toggle-menu");
+    // burger.classList.remove("fa-bars")
+    // burger.classList.add("fa-times")
+
+    if (burger.classList.contains("fa-bars")) {
+      burger.classList.remove("fa-bars");
+      burger.classList.add("fa-times");
+    } else if (burger.classList.contains("fa-times")) {
+      burger.classList.remove("fa-times");
+      burger.classList.add("fa-bars");
+    }
+    // burger.onclick = () => {
+    //   menuToggle.classList.toggle("toggle-menu");
+    //   burger.classList.remove("fa-times")
+    // burger.classList.add("fa-bars")
+  };
+});
+
 $(function () {
   var dateFormat = "mm/dd/yy",
     from = $("#from")
