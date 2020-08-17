@@ -17,7 +17,10 @@ body {
     margin-bottom: 0;
   }
 
-  
+  .landing {
+    height: 100vh;
+    /* padding-top: 10px; */
+  }
 
 nav {
   font-family: "Roboto Slab", serif;
@@ -966,7 +969,7 @@ main {
 
 
 /* LANDING PAGE */
-@media only screen and (max-width: 1000px)  {
+@media only screen and (max-width: 1200px)  {
 
   .container {
     padding-right: 45px !important;
