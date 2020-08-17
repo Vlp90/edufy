@@ -32,12 +32,10 @@
 
 
   <nav class='d-flex align-items-center'>
-    {{#unless isLoggedIn}}
+
       <a href="/"><img src="/images/logo.svg" id="logo"></a>
-      {{/unless}}
-        {{#if isLoggedIn}}
-      <a href="/index"><img src="/images/logo.svg" id="logo"></a>
-      {{/if}}
+    
+      
       <ul class='menu toHide'>
 
         {{#unless isLoggedIn}}
@@ -46,10 +44,10 @@
         {{/unless}}
 
         {{#if isLoggedIn}}
-        <li><a href="/index" class="nav-line">home</a></li>
-        <li><a href="/courses/student" class="nav-line">my courses</a></li>
-        <li><a href="/courses/prof" class="nav-line">my teaching</a></li>
-        <li><a href="/users/profile/" class="nav-line">profile</a></li>
+        <li><a href="/index" class="nav-line">Home</a></li>
+        <li><a href="/courses/student" class="nav-line">My courses</a></li>
+        <li><a href="/courses/prof" class="nav-line">My teaching</a></li>
+        <li><a href="/users/profile/" class="nav-line">Profile</a></li>
         <li><a href="/auth/logout" class="right-button"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
         {{/if}}
         {{user.currentUser}}

@@ -113,6 +113,24 @@ nav li a:hover {
   transition: 0.3s !important;
 }
 
+.btn-secondary {
+  background-color: #d1d1e9 !important;
+  border-color: #d1d1e9 !important;
+  border-radius: 6px !important;
+  padding: 15px 35px !important;
+  color: white !important;
+  transition: 0.4s !important;
+  border-color: none !important;
+}
+
+.btn-secondary:hover {
+  background-color: #6246ea !important;
+  border-color: #6246ea !important;
+  color: #d1d1e9 !important;
+  text-decoration: none !important;
+  transition: 0.3s !important;
+}
+
 .right-button:hover,
 .classic-btn:hover {
   background-color: #d1d1e9;
@@ -989,8 +1007,10 @@ main {
 }
 
 .profile-user-pic img {
-  height: 100px;
+  height: 200px;
   align-self: center;
+  border-radius: 100%;
+  margin-top: 15px;
 }
 
 .profile-input {

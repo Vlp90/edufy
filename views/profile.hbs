@@ -1,15 +1,10 @@
-<h1 class="h1-vlad">My Profile</h1>
+<h1 style="text-align: left;" class="h1-vlad">My Profile</h1>
 
-<div class="profile-form-inputs">
-    <style type="text/css">
-        div {
-            display: table-cell;
-            vertical-align: middle;
-        }
-    </style>
+<div class=" form-sign-up">
+ 
     <div class="profile-user-pic">
         {{#if user.image }}
-        <img src="{{user.image}}" alt="" class="profile-user-pic-size">
+        <img src="{{user.image}}" alt="">
         {{/if}}
     </div>
     <div class="profile-input">
@@ -24,5 +19,5 @@
     <div class="profile-input">
         <p class="profile-input-txt">{{user.email}}</p>
     </div>
-    <a href="/users/profile/edit" class="sign-up-btn" id="profile-btn-edit">Edit my profile</a>
+    <a href="/users/profile/edit" style="width: 100%;" class="btn btn-primary" id="profile-btn-edit">Edit my profile</a>
 </div>
