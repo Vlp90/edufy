@@ -80,15 +80,38 @@ nav li a {
 .right-button {
   background-color: #6246ea;
   border-radius: 6px;
-  padding: 18px 35px;
+  padding: 15px 35px;
   color: white;
-  transition: 0.4s; }
+  transition: 0.4s; 
+  border-color: none;
+}
 
-.right-button:hover {
+.btn-primary {
+  background-color: #6246ea !important;
+  border-color:#6246ea !important;
+  border-radius: 6px !important;
+  padding: 15px 35px !important;
+  color: white !important;
+  transition: 0.4s !important; 
+  border-color: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #d1d1e9 !important;
+  border-color:#d1d1e9 !important;
+  color: #6246ea !important;
+  text-decoration: none !important;
+  transition: 0.3s !important; 
+}
+
+  
+.right-button:hover, .classic-btn:hover {
   background-color: #d1d1e9;
   color: #6246ea;
   text-decoration: none;
-  transition: 0.3s; }
+  transition: 0.3s; 
+  
+}
 
 .form-input {
   color: #282828;
@@ -110,7 +133,7 @@ nav li a {
     border-color: #6246ea; }
 
 .form-sign-up {
-  width: 400px;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -176,7 +199,6 @@ nav li a {
   z-index: -1; }
 
 .inputfile + label {
-  max-width: 80%;
   font-size: 1.25rem;
   /* 20px */
   text-overflow: ellipsis;
@@ -186,6 +208,7 @@ nav li a {
   overflow: hidden;
   padding: 0.625rem 1.25rem;
   margin-bottom: 20px;
+  border-radius: 5px;
   /* 10px 20px */ }
 
 .no-js .inputfile + label {
@@ -207,7 +230,11 @@ nav li a {
   /* 4px */ }
 
 .sign-up--ctn {
-  padding: 50px; }
+  /* padding: 50px;  */
+  margin-top: 50px;
+}
+
+
   .sign-up--ctn h1 {
     text-align: center;
     margin-bottom: 20px; }
@@ -962,6 +989,7 @@ main {
 .limitWidth {
   width: 250px;
   font-size:20px;
+  text-align: center;
 }
 
 /* Bootstrap BTn */
@@ -1014,5 +1042,9 @@ main {
   nav {
     display: flex;
     justify-content: space-between;
+  }
+
+  .form-sign-up {
+    width: 100%;
   }
 }
