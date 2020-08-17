@@ -114,6 +114,7 @@ nav ul {
 }
 .nav-line:hover:before {
   right: 0;
+ 
 }
 
 
@@ -155,6 +156,7 @@ nav li a {
 
 nav li a:hover {
   text-decoration: none;
+  color: #6246ea;
 }
 
 
