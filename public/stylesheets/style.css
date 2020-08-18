@@ -466,12 +466,7 @@ a:-webkit-any-link  {
   color: #6246ea;
 }
 
-.vignette-description {
-  /* margin: 10px 0 15px 0;
-  color: #d1d1e9; */
-  /* white-space: nowrap;
-  overflow: hidden; */
-}
+
 
 .overflow-ellipsis {
   text-overflow: ellipsis;
@@ -492,28 +487,6 @@ a:-webkit-any-link  {
   margin: 20px auto;
 }
 
-select {
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background: #5c6664;
-  background-image: none;
-  flex: 1;
-  padding-left: 2em;
-  color: #fffffe;
-  cursor: pointer;
-  font-size: 1em;
-  font-family: "Roboto", sans-serif; */
-  /* margin: 0 auto; */
-}
-
-select::-ms-expand {
-  /* display: none; */
-}
 
 .select {
   position: relative;
@@ -553,17 +526,7 @@ select::-ms-expand {
   appearance: none;
 }
 
-.select::after {
-  /* content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #6246ea;
-  cursor: pointer;
-  pointer-events: none;
-  transition: 0.25s all ease; */
-}
+
 
 .select:hover::after {
   color: #d1d1e9;
@@ -752,10 +715,7 @@ main {
   font-weight: normal;
 }
 
-#courseID-title {
-  /* font-size: 50px; */
-  /* padding: 20px 0; */
-}
+
 
 #courseID-description {
   padding-top: 15px;
@@ -1345,11 +1305,7 @@ main {
     width: 100%;
   }
 
-  #mathSearch {
-    /* background-color: red;
-    padding: 0 !important;
-    margin-left: 0 !important; */
-  }
+ 
   .mathFrom {
     width: 25%;
     margin-left: 5px;
