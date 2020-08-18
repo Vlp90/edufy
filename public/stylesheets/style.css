@@ -23,14 +23,12 @@ body {
 
 .toggle-menu {
   display: none;
-
 }
 
 #burger-menu:hover {
-  color: #D1D1E9;
+  color: #d1d1e9;
   transition: 0.4s;
   cursor: pointer;
-
 }
 
 
@@ -39,25 +37,23 @@ body {
   width: 100%;
   /* background-color: red; */
   /* border: 1px solid #6246ea; */
-
 }
 
 .burger-container ul {
   list-style: none;
   text-align: center;
   padding-right: 0;
-
 }
 
 .burger-container ul li {
-margin-bottom: 1em;
-font-size: 20px;
-font-family: "Roboto", sans-serif;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .burger-container ul li a {
-color: #6246ea;
-text-decoration: none;
+  color: #6246ea;
+  text-decoration: none;
 }
 
 .landing {
@@ -114,9 +110,7 @@ nav ul {
 }
 .nav-line:hover:before {
   right: 0;
- 
 }
-
 
 .nav-line-b {
   /* margin-right: 3em; */
@@ -158,8 +152,6 @@ nav li a:hover {
   text-decoration: none;
   color: #6246ea;
 }
-
-
 
 .right-button {
   background-color: #6246ea;
@@ -375,14 +367,20 @@ main {
 }
 
 .vignette-container {
-  width: 25%;
   height: 25%;
-  margin: 20px 20px 0 0;
+  /* margin: 20px 20px 0 0; */
+  max-width: 100%;
+  min-width: 250px;
+  margin-bottom: 20px;
+  /* height: 5%; */
+  /* margin: 20px 20px 0 0; */
 }
+
 
 .global-vignette-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .vignette-container-inside {
@@ -394,14 +392,12 @@ main {
 .vignette-main-image {
   border-radius: 6px 6px 0 0;
   width: 100%;
-  height: 15rem;
+  height: 10rem;
   object-fit: cover;
-  filter: grayscale(60%);
+  filter: brightness(80%);
 }
 
-#vignette-link {
-  text-decoration: none;
-}
+
 
 .cercle {
   width: 50px;
@@ -412,6 +408,10 @@ main {
 .teacher-image {
   width: 100%;
   object-fit: cover;
+}
+
+a:-webkit-any-link  {
+  text-decoration: none !important;
 }
 
 #contain {
@@ -428,6 +428,7 @@ main {
 .vignette-inside {
   padding: 20px 30px;
   line-height: 20px;
+  width: 100%;
 }
 
 .box-shad {
@@ -466,10 +467,10 @@ main {
 }
 
 .vignette-description {
-  margin: 10px 0 15px 0;
-  color: #d1d1e9;
-  white-space: nowrap;
-  overflow: hidden;
+  /* margin: 10px 0 15px 0;
+  color: #d1d1e9; */
+  /* white-space: nowrap;
+  overflow: hidden; */
 }
 
 .overflow-ellipsis {
@@ -507,7 +508,7 @@ select {
   cursor: pointer;
   font-size: 1em;
   font-family: "Roboto", sans-serif; */
- /* margin: 0 auto; */
+  /* margin: 0 auto; */
 }
 
 select::-ms-expand {
@@ -515,7 +516,7 @@ select::-ms-expand {
 }
 
 .select {
-  position: relative; 
+  position: relative;
   display: flex;
   /* width: 100%; */
   height: 3em;
@@ -524,17 +525,17 @@ select::-ms-expand {
   background: #2b2c34;
   overflow: hidden;
   border-radius: 0.25em;
- text-align: center; 
- color: #fffffe;
- padding-left: 2em;
- -webkit-appearance: none;
+  text-align: center;
+  color: #fffffe;
+  padding-left: 2em;
+  -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
 .select-add {
-  position: relative; 
+  position: relative;
 
   width: 40%;
   height: 3em;
@@ -543,15 +544,14 @@ select::-ms-expand {
   background: #2b2c34;
   overflow: hidden;
   border-radius: 0.25em;
- text-align: center; 
- color: #fffffe;
- padding-left: 2em;
- -webkit-appearance: none;
+  text-align: center;
+  color: #fffffe;
+  padding-left: 2em;
+  -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
-
 
 .select::after {
   /* content: "\25BC";
@@ -593,12 +593,6 @@ main {
   box-shadow: 0 2px 14px rgba(126, 87, 88, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-.vignette-container {
-  max-width: 370px;
-  height: 5%;
-  margin: 20px 20px 0 0;
-}
-
 .global-vignette-container {
   display: flex;
   flex-wrap: wrap;
@@ -609,17 +603,7 @@ main {
   box-shadow: 0 2px 14px rgba(126, 87, 88, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-.vignette-main-image {
-  border-radius: 6px 6px 0 0;
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  filter: grayscale(0.6);
-}
 
-.vignette-link {
-  text-decoration: none;
-}
 
 .cercle {
   width: 40px;
@@ -634,9 +618,10 @@ main {
 
 #contain-teacher {
   display: flex;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   position: absolute;
-  top: 0px;
+  top: 16px;
+  left: 32px;
 }
 
 .date-vignette {
@@ -645,7 +630,7 @@ main {
   text-align: right;
   position: absolute;
   border-radius: 6px 0 0 6px;
-  top: 118px;
+  top: 105px;
   padding: 4px;
   right: 0;
 }
@@ -685,6 +670,11 @@ main {
   color: #6246ea;
 }
 
+.title-tag p,
+.vignette-bottom-right p {
+  margin-bottom: 0 !important;
+}
+
 .vignette-bottom-right p {
   color: #d1d1e9;
   font-size: 15px;
@@ -697,13 +687,27 @@ main {
 .vignette-description {
   margin: 10px 0 15px 0;
   color: #d1d1e9;
-  white-space: nowrap;
-  overflow: hidden;
+  /* white-space: nowrap;
+  overflow: hidden; */
   width: 100%;
 }
 
 .overflow-ellipsis {
   text-overflow: ellipsis;
+}
+
+.two-line-ellipsis {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  /* fallback */
+  max-height: 40px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .title-tag {
@@ -714,6 +718,11 @@ main {
 
 .title-tag h2 {
   color: black;
+  text-overflow: ellipsis;
+  max-width: 220px;
+  min-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #courseID {
@@ -990,21 +999,18 @@ main {
   margin-left: 30px;
   text-align: center;
   font-weight: bold;
-  
 }
 
-#mathSearch select, #mathSearch input  {
+#mathSearch select,
+#mathSearch input {
   height: 56px;
   border-radius: 5px;
 }
-
-
 
 #mathSearch button {
   /* margin-top: -5px; */
   margin-left: 30px;
 }
-
 
 /* #mathSearch-button {
   border: none;
@@ -1286,7 +1292,6 @@ main {
   text-align: center;
 }
 
-
 /* Bootstrap BTn */
 
 /* LANDING PAGE */
@@ -1335,8 +1340,6 @@ main {
     width: 100%;
   }
 
-
-
   #mathSearch {
     /* background-color: red;
     padding: 0 !important;
@@ -1355,23 +1358,20 @@ main {
   #mathSearch button {
     margin-top: 15px;
     width: 100%;
-    margin-left: 0; 
-
+    margin-left: 0;
   }
 }
 
-@media only screen and (max-width: 992px) {
-  /* #mathSearch > input {
-    margin-top: 15px;
-    margin-left: 0;
-    
-    width: 100% !important;
-  } */
+@media only screen and (max-width: 990px) {
+  .title-tag h2 {
+    max-width: 210px;
+    min-width: 180px;
+  }
+}
 
-  #mathSearch {
-    /* background-color: blue;
-    padding: 0 !important;
-    margin-left: 0 !important;
-    width: 100% !important; */
+@media only screen and (max-width: 424px) {
+  .title-tag h2 {
+    max-width: 140px;
+    min-width: 50px;
   }
 }
