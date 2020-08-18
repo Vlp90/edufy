@@ -23,10 +23,9 @@
 <button class='btn btn-primary'>Search</button>
 </form>
 
-
-{{#each finalArr}}
 <h2 class="h2-date-vlad">{{this.date}}</h2>
-{{!-- vignette --}}
+{{!-- 
+{{#each finalArr}}
 <div class="global-vignette-container">
     {{#each this.courses}}
     <div class="vignette-container">
@@ -53,7 +52,6 @@
                     </div>
                 </div>
                 <p class="overflow-ellipsis vignette-description">{{this.description}}</p>
-                {{!-- <p>DATE: {{this.date}}</p> --}}
                 <div class="vignette-bottom">
                     <div class="vignette-bottom-left">
                         {{#each participants}}
@@ -65,12 +63,62 @@
                         <p>{{placesLeft this.participants this.maxPeople}} places left</p>
                     </div>
                 </div>
-                {{!-- <button><a href="/{{this._id}}">Discover this course</a></button> --}}
             </div>
         </div>
     </div>
     </a>
     {{/each}}
 </div>
-{{/each}}
+{{/each}} --}}
 
+
+
+
+
+<div class="row">
+        {{#each finalArr}}
+        {{#each this.courses}}
+  <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="vignette-container">
+                    <a class="vignette-link" href="/{{this._id}}">
+            <div class="vignette-container-inside">
+                <article class="teacher-vignette">
+                        <img class="vignette-main-image" src="{{this.image}}" alt="img" />
+                        <div id="contain-teacher" class="cercle">
+                            <img class="cercle teacher-image" src="{{this.teacher.image}}" alt=""></li>
+                            <h4>{{this.teacher.name}} </h4>
+                            <h4>{{this.teacher.lastname}}</h4>
+                        </div>
+                        <div>
+                            <h6 class="date-vignette">{{formatDate this.date}}</h6>
+                        </div>
+                </article>
+                <div class="vignette-inside">
+                    <div class="title-tag">
+                        <div>
+                            <h2 >{{this.title}}</h2>
+                        </div>
+                        <div>
+                            <p class="tag">{{this.category.category}}</p>
+                        </div>
+                    </div>
+                    <p class="two-line-ellipsis vignette-description">{{this.description}}</p>
+                    <div class="vignette-bottom">
+                        <div class="vignette-bottom-left">
+                            {{#each participants}}
+                            <img class="cercle" src="{{this.image}}" />
+                            {{/each}}
+                        </div>
+                        <div class="vignette-bottom-right">
+                            <h2>{{priceUpdate this.participants this.price}}$ / pers </h2>
+                            <p>{{placesLeft this.participants this.maxPeople}} places left</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+  </div>
+   {{/each}}
+{{/each}}
+</div>
