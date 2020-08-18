@@ -31,8 +31,15 @@ hbs.registerHelper("formatDate", function (date) {
 hbs.registerHelper("placesLeft", function (arr, max) {
   return max - arr.length;
 });
+
 hbs.registerHelper("priceUpdate", function (par, price) {
-  return Math.floor(price / par.length);
+
+  if (par.length === 0) {
+    return price
+  } else {
+
+    return Math.floor(price / par.length);
+  }
 });
 hbs.registerHelper("formatHour", function (date) {
   return moment(date).format("kk:mm");

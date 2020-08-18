@@ -946,13 +946,7 @@ main {
   flex-wrap: wrap;
 }
 
-#mathSearch {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  width: 100%; */
-}
+
 
 .mathFrom {
   /* margin-left: 40px; */
@@ -982,10 +976,7 @@ main {
   margin: 0!important;
 }
 
-#mathSearch button {
-  /* margin-top: -5px; */
-  /* margin-left: 30px; */
-}
+
 
 /* #mathSearch-button {
   border: none;
@@ -1326,11 +1317,7 @@ main {
     margin-left: 5px;
   }
 
-  #mathSearch button {
-    /* margin-top: 15px;
-    width: 100%;
-    margin-left: 0; */
-  }
+
 }
 
 @media only screen and (max-width: 990px) {

@@ -12,6 +12,7 @@ router.get("/", function (req, res, next) {
 
 //Homepage
 router.get("/index", function (req, res, next) {
+
   let dateSort = {
     date: +1,
   };
@@ -57,6 +58,8 @@ router.get("/index", function (req, res, next) {
       ],
     };
   }
+
+
   Category.find().then((dbResCat) => {
     Course.find(filter)
       .sort(dateSort)
@@ -88,6 +91,10 @@ router.get("/index", function (req, res, next) {
           });
         });
 
+        if (finalArr.length < 1) {
+          console.log('no items')
+        }
+
         res.render("index", {
           // futureCourses,
           courses: dbRes,
@@ -97,6 +104,9 @@ router.get("/index", function (req, res, next) {
           finalArr: finalArr,
           // participants: dbRes.participants,
         });
+      }).catch((dbErr) => {
+        console.log('no items')
+        console.log(dbErr);
       });
   });
 });
