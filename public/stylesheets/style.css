@@ -733,9 +733,13 @@ main {
 
 #courseID-image {
   width: 100%;
+  height: 200px;
   margin-bottom: 20px;
-  filter: grayscale(0.6);
+  /* filter: grayscale(0.6); */
   border-radius: 6px;
+  object-fit: cover;
+  /* filter: brightness(80%); */
+
 }
 
 #courseID li {
@@ -749,8 +753,8 @@ main {
 }
 
 #courseID-title {
-  font-size: 50px;
-  padding: 20px 0;
+  /* font-size: 50px; */
+  /* padding: 20px 0; */
 }
 
 #courseID-description {
@@ -769,6 +773,7 @@ main {
   border-radius: 6px;
   display: inline-flex;
   font-size: 15px;
+  margin-bottom: 0 !important;
 }
 
 #courseId-price {
@@ -786,8 +791,8 @@ main {
 
 #courseID-participants {
   margin-top: 10px;
-  margin-left: 15px;
-  margin-bottom: 20px;
+  margin-right: 15px;
+  /* margin-bottom: 20px; */
   border-radius: 100%;
   height: 50px;
 }
@@ -802,10 +807,10 @@ main {
 }
 
 #courseID-location {
-  font-size: 24px;
+  /* font-size: 24px; */
   padding-right: 10px;
   color: #d1d1e9;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 #courseID-locationBis {
@@ -874,7 +879,7 @@ main {
   color: #6246ea;
   transition: 0.4s;
 }
-
+/* 
 #my-courseID-remove {
   background: none;
   background-color: #6246ea;
@@ -919,7 +924,7 @@ main {
   background-color: #d1d1e9;
   color: #6246ea;
   transition: 0.4s;
-}
+} */
 
 #courseID-teacherDescription {
   color: #d1d1e9;
@@ -929,7 +934,7 @@ main {
 #courseID-leftPart {
   width: 2400px;
   border-radius: 6px;
-  padding: 35px;
+  padding: 35px 0;
   position: relative;
 }
 
@@ -964,9 +969,9 @@ main {
 }
 
 .courseID-hour {
-  position: absolute;
+  /* position: absolute;
   top: 35px;
-  right: 35px;
+  right: 35px; */
   color: #d1d1e9;
   font-weight: normal;
 }

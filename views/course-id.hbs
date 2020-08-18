@@ -1,23 +1,49 @@
 <div id="courseID">
-    <div id="courseID-leftPart" class="box-shad">
-        <h3 id="courseID-date">{{formatDate course.date}}</h3>
-        <h2 class="courseID-hour">{{formatHour course.date}}</h2>
-        <h1 id="courseID-title">{{course.title}}</h1>
-        <div id="courseID-catPrice">
-            <p id="courseID-Cat">{{course.category.category}}</p>
-            <h1 id="courseId-price">{{priceUpdate this.participants course.price}}$ / pers</h1>
+    <div id="courseID-leftPart" class="">
+        <img src="{{course.image}}" id="courseID-image" alt="IMG">
+
+        <div class='d-flex justify-content-between align-items-center'>
+            <h3 id="courseID-date">{{formatDate course.date}}</h3>
+            <h2 class="courseID-hour">{{formatHour course.date}}</h2>
         </div>
+
+        <div class='d-flex justify-content-between align-items-center'>
+            <h1 id="courseID-title">{{course.title}}</h1>
+            <p id="courseID-Cat">{{course.category.category}}</p>
+        </div>
+
+ {{!-- <h4 id="courseID-location">Participants :</h4> --}}
+
+        {{#each participants}}
+        <img src="{{this.image}}" alt="" id="courseID-participants">
+        {{/each}}
         <p id="courseID-description">{{course.description}}</p>
         {{!-- <li>
             <h1 id="courseId-price">{{course.price}}$ / pers</h1>
         </li> --}}
-        {{#each participants}}
-        <img src="{{this.image}}" alt="" id="courseID-participants">
-        {{/each}}
-        <div id="courseID-entireLocation">
-            <p id="courseID-location">Location :</p>
-            <p id="courseID-locationBis">{{course.place}}</p>
+
+
+
+          <div class='d-flex justify-content-between align-items-center'>
+
+        <div class='d-flex  align-items-center'>
+            {{!-- <h4 id="courseID-location">Location :</h4> --}}
+            <h1 id="courseId-price">{{course.place}}</h1>
         </div>
+
+            <div class='d-flex  align-items-center'>
+                {{!-- <h4 id="courseID-location">Price :</h4> --}}
+                <h1 id="courseId-price">{{priceUpdate this.participants course.price}}$ / pers</h1>
+
+            </div>
+
+             </div>
+
+
+       
+
+
+        
         {{!-- <li>
             <p>Min people: {{course.minPeople}}</p>
         </li>
@@ -27,19 +53,8 @@
         <li>
             <p>{{placesLeft this.participants course.maxPeople}} places left</p>
         </li> --}}
-        <div>
-            {{#if hasCourse}}
-            <form action="/courses/{{course._id}}/remove" method="POST" id="courseID-changeFont">
-                <button id="courseID-remove">Remove this course</button>
-            </form>
-            {{else}}
-            <form action="/courses/{{course._id}}/add" method="POST">
-                <button id="courseID-remove">Add this course</button>
-            </form>
-            {{/if}}
-        </div>
-    </div>
-    <div id="courseID-rightPart">
+
+        {{!-- <div id="courseID-rightPart">
         <img src="{{course.image}}" id="courseID-image" alt="IMG">
         <div class="box-shad" id="courseID-box">
             <div id="courseID-teacher">
@@ -51,5 +66,36 @@
                 nihil officia praesentium nemo laborum sint, quaerat, at sed iusto, veritatis similique reprehenderit
                 architecto voluptate perspiciatis! Quia unde iusto cumque!</p>
         </div>
+    </div> --}}
+
+        {{!-- <div class='d-flex justify-content-between align-items-center'>
+
+            <div class='d-flex  align-items-center'>
+                <h4 id="courseID-location">Price :</h4>
+                <h1 id="courseId-price">{{priceUpdate this.participants course.price}}$ / pers</h1>
+
+            </div> --}}
+            {{!-- {{#if hasCourse}}
+            <form action="/courses/{{course._id}}/remove" method="POST" id="courseID-changeFont">
+                <button id="courseID-remove">Remove this course</button>
+            </form>
+            {{else}}
+            <form action="/courses/{{course._id}}/add" method="POST">
+                <button id="courseID-remove">Add this course</button>
+            </form>
+            {{/if}} --}}
+
+            {{#if hasCourse}}
+            <form action="/courses/{{course._id}}/remove" method="POST" id="courseID-changeFont">
+                <button style="width: 100%; margin-top:20px;" class='btn btn-secondary' id="courseID-remove">Remove this course</button>
+            </form>
+            {{else}}
+            <form action="/courses/{{course._id}}/add" method="POST">
+                <button  style="width: 100%; margin-top:20px;" class='btn btn-primary' id="courseID-remove">Add this course</button>
+            </form>
+            {{/if}}
+
+        </div>
+
     </div>
 </div>
