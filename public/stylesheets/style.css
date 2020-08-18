@@ -292,6 +292,10 @@ nav li a:hover {
   z-index: -1;
 }
 
+.inputWdth {
+  width: 45% !important;
+}
+
 .inputfile-1 + label {
   color: #fffffe;
   background-color: #2b2c34;
@@ -488,7 +492,7 @@ main {
 }
 
 select {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
@@ -502,30 +506,55 @@ select {
   color: #fffffe;
   cursor: pointer;
   font-size: 1em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; */
  /* margin: 0 auto; */
 }
 
 select::-ms-expand {
-  display: none;
+  /* display: none; */
 }
 
 .select {
-  /* position: relative; */
+  position: relative; 
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   height: 3em;
+  flex: 1;
   line-height: 3;
   background: #2b2c34;
   overflow: hidden;
   border-radius: 0.25em;
- text-align: center;
+ text-align: center; 
+ color: #fffffe;
+ padding-left: 2em;
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.select-add {
+  position: relative; 
+
+  width: 40%;
+  height: 3em;
+  margin-bottom: 20px;
+  line-height: 3;
+  background: #2b2c34;
+  overflow: hidden;
+  border-radius: 0.25em;
+ text-align: center; 
+ color: #fffffe;
+ padding-left: 2em;
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
 }
 
 
-
 .select::after {
-  content: "\25BC";
+  /* content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
@@ -533,7 +562,7 @@ select::-ms-expand {
   background: #6246ea;
   cursor: pointer;
   pointer-events: none;
-  transition: 0.25s all ease;
+  transition: 0.25s all ease; */
 }
 
 .select:hover::after {
@@ -543,6 +572,7 @@ select::-ms-expand {
 .form-top {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 main {

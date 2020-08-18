@@ -1,22 +1,22 @@
 <h1 class="h1-vlad">Add new course</h1>
 
 <div class="create-course--ctn">
-    <form action="/courses/add" method="POST" enctype="multipart/form-data">
+    <form  style="width: 100%;" action="/courses/add" method="POST" enctype="multipart/form-data">
         {{#if msg}}
         <p class="msg {{msg.status}}">{{msg.txt}}</p>
         {{/if}}
 
-        <div class="form-top">
-            <div class="">
-                <select name="category" id="category" class="select">
-                    <option value="disabled selected">Choose a category</option>
+        <div class="d-flex justify-content-between flex-wrap">
+            
+                <select name="category" id="category" class="select-add">
+                    <option value="disabled selected">Choose a category ↓</option>
                     {{#each categories}}
                     <option value="{{this._id}}">{{this.category}}</option>
                     {{/each}}
                 </select>
-            </div>
-            <div class="box">
-                <input type="file" name="image" id="file-1" class="inputfile inputfile-1"
+        
+            <div class="">
+                <input type="file" name="image" id="file-1" class="inputfile inputfile-1 inputWdth"
                     data-multiple-caption="{count} files selected" multiple required />
                 <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
                         <path
@@ -31,16 +31,18 @@
         </div>
 
         <div>
+            <label for="price">Price</label>
+            <input id="price" type="number" name="price" placeholder="€" min="10" class="form-input" required>
+        </div>
+
+
+        <div>
             <label for="description">Description</label>
             <input id="description" type="text" name="description" placeholder="Description" class="form-input"
                 required>
         </div>
 
-        <div>
-            <label for="price">Price</label>
-            <input id="price" type="number" name="price" placeholder="€" min="10" class="form-input" required>
-        </div>
-
+        
         <div>
             {{!-- no date in the past --}}
             <label for="date">Date</label>
