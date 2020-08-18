@@ -947,21 +947,21 @@ main {
 }
 
 #mathSearch {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 30px;
-  width: 100%;
+  width: 100%; */
 }
 
 .mathFrom {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   text-align: center;
   font-weight: bold;
 }
 
 .mathTo {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   text-align: center;
   font-weight: bold;
 }
@@ -970,11 +970,21 @@ main {
 #mathSearch input {
   height: 56px;
   border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#mathSearch button {
+  margin-bottom: 10px;
+
+}
+
+.noPadding {
+  margin: 0!important;
 }
 
 #mathSearch button {
   /* margin-top: -5px; */
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 /* #mathSearch-button {
@@ -1317,9 +1327,9 @@ main {
   }
 
   #mathSearch button {
-    margin-top: 15px;
+    /* margin-top: 15px;
     width: 100%;
-    margin-left: 0;
+    margin-left: 0; */
   }
 }
 
