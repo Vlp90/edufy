@@ -91,9 +91,7 @@ router.get("/index", function (req, res, next) {
           });
         });
 
-        if (finalArr.length < 1) {
-          console.log('no items')
-        }
+       
 
         res.render("index", {
           // futureCourses,

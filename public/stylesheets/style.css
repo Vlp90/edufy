@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+.message-search-err {
+  text-align: center;
+  width: 100%;
+  margin-top: 10vh;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   color: #2b2c34;
@@ -35,6 +41,7 @@ body {
 .burger-container {
   margin-top: 30px;
   width: 100%;
+  /* position: absolute; */
   /* background-color: red; */
   /* border: 1px solid #6246ea; */
 }
@@ -783,7 +790,7 @@ main {
   font-family: "Roboto Slab", serif;
 }
 
-#courseID-edit {
+ /* #courseID-edit {
   background: none;
   background-color: #6246ea;
   color: whitesmoke;
@@ -796,27 +803,26 @@ main {
   font-weight: bold;
   border-radius: 6px;
   transition: 0.4s;
-}
+} */
 #courseID-edit a {
   text-decoration: none;
   color: #fffffe;
-}
-
-#theButtons {
+} 
+/* #theButtons {
   display: flex;
   position: absolute;
   bottom: 35px;
   left: 35px;
-}
+} */
 
-#courseID-edit:hover {
+/* #courseID-edit:hover {
   background-color: #d1d1e9;
   color: #6246ea;
   transition: 0.4s;
 }
 #courseID-edit:hover a {
   color: #6246ea;
-}
+} */
 
 #courseID-add {
   margin-left: 10px;
@@ -1036,7 +1042,8 @@ main {
 }
 
 .main-block-landing {
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
+  height:calc(100vh - 15%);
   display: flex;
   flex-direction: row;
   align-items: center;

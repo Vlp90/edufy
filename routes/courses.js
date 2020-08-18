@@ -11,6 +11,12 @@ router.get("/student", (req, res) => {
     .populate({ path: "participants", model: User })
     .populate({ path: "teacher", model: User })
     .then((dbRes) => {
+
+      let errorMessage = null;
+
+      if (dbRes.length < 1) {
+        errorMessage = "No items" 
+      }
       // User.findById(req.session.currentUser._id)
       //   .populate("courses")
       //   .then((dbResUser) => {
@@ -39,6 +45,7 @@ router.get("/student", (req, res) => {
       //     console.log();
       res.render("my-courses", {
         courses: dbRes,
+        errorMessage: errorMessage,
         // finalArr: finalArr,
       });
     })
@@ -55,9 +62,18 @@ router.get("/prof", function (req, res, next) {
         .populate("category")
         .populate("participants")
         .then((dbRes) => {
+
+          let errorMessage = null;
+
+          if (dbRes.length < 1) {
+            errorMessage = "No items" 
+          }
+
+
           res.render("prof-courses", {
             courses: dbRes,
             category: dbResCat,
+            errorMessage: errorMessage,
           });
         })
         .catch((err) => {

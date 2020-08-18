@@ -1,7 +1,14 @@
 <h1 class="h1-vlad">My courses</h1>
 <h2 class="h2-date-vlad">{{this.date}}</h2>
 
+{{#if errorMessage}}
+<div class='message-search-err'>
+    <h2>Sorry</h2>
+    <p>You are not following any course...</p>
+    <a href="/index" class='btn btn-primary'>Discover courses </a>
 
+</div>
+{{/if}}
 
     {{!-- <div class="global-vignette-container">
         {{#each courses}}
