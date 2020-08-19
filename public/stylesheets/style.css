@@ -1097,7 +1097,7 @@ main {
   align-self: center;
   border-radius: 100%;
   margin-top: 15px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .profile-input {
