@@ -11,7 +11,7 @@ const userSchema = new Schema({
   image: {
     type: String,
     default:
-      "https://media-exp1.licdn.com/dms/image/C4D03AQE3_v9XLjqxgQ/profile-displayphoto-shrink_200_200/0?e=1593648000&v=beta&t=yN9dZ5gaVNjj2PIYy-I2qlNuBVdDujbO4fDjfvn8WmU",
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
   },
 });
 
