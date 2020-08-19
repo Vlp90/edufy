@@ -1093,9 +1093,11 @@ main {
 
 .profile-user-pic img {
   height: 200px;
+  width: 200px;
   align-self: center;
   border-radius: 100%;
   margin-top: 15px;
+  object-fit: cover;
 }
 
 .profile-input {
@@ -1144,13 +1146,13 @@ main {
 }
 
 .profile-form-inputs {
-  width: 400px;
+  /* width: 400px;
   text-align: left;
-  align-items: flex-start;
+  align-items: flex-start; */
 }
 
 .profile-form-inputs a {
-  text-decoration: none;
+  /* text-decoration: none;
   width: 400px;
   display: block;
   margin-top: 30px;
@@ -1159,7 +1161,7 @@ main {
   padding: 15px;
   text-align: center;
   color: white;
-  transition: 0.4s;
+  transition: 0.4s; */
   /* vertical-align: middle;  */
 }
 
