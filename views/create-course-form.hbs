@@ -1,7 +1,7 @@
 <h1 class="h1-vlad">Add new course</h1>
 
 <div class="create-course--ctn">
-    <form  style="width: 100%;" action="/courses/add" method="POST" enctype="multipart/form-data">
+    <form  action="/courses/add" method="POST" enctype="multipart/form-data">
         {{#if msg}}
         <p class="msg {{msg.status}}">{{msg.txt}}</p>
         {{/if}}
@@ -16,7 +16,8 @@
                 </select>
         
             <div class="">
-                <input type="file" name="image" id="file-1" class="inputfile inputfile-1 inputWdth"
+                
+                <input type="file" name="image" id="file-1" class="inputfile inputfile-1 "
                     data-multiple-caption="{count} files selected" multiple required />
                 <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
                         <path

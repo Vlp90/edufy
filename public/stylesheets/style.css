@@ -285,17 +285,15 @@ nav li a:hover {
 }
 
 .inputfile {
-  width: 0.1px;
+  /* width: 0.1px; */
   height: 0.1px;
   opacity: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   z-index: -1;
 }
 
-.inputWdth {
-  width: 45% !important;
-}
+
 
 .inputfile-1 + label {
   color: #fffffe;
