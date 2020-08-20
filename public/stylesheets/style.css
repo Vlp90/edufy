@@ -720,6 +720,7 @@ main {
   font-size: 24px;
   color: #d1d1e9;
   font-weight: normal;
+  width: 50%;
 }
 
 
@@ -762,6 +763,8 @@ main {
   /* margin-bottom: 20px; */
   border-radius: 100%;
   height: 50px;
+  width: 50px;
+  object-fit: cover;
 }
 
 #courseID-teacher {
@@ -1097,7 +1100,7 @@ main {
   align-self: center;
   border-radius: 100%;
   margin-top: 15px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .profile-input {
@@ -1268,13 +1271,17 @@ main {
   text-align: center;
 }
 
+
+#courseID-title {
+  width: 60%;
+}
 /* Bootstrap BTn */
 
 /* LANDING PAGE */
 @media only screen and (max-width: 1200px) {
   .container {
-    padding-right: 45px !important;
-    padding-left: 45px !important;
+    padding-right: 35px !important;
+    padding-left: 35px !important;
   }
   .toHide {
     display: none;
