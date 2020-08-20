@@ -17,6 +17,8 @@ html {
 
 body {
   color: #2b2c34;
+  /* overflow: hidden; */
+
 }
 
 #logo {
@@ -516,7 +518,7 @@ a:-webkit-any-link  {
 
 .select-add {
   position: relative;
-
+  min-width: 233px;
   width: 40%;
   height: 3em;
   margin-bottom: 20px;
@@ -1046,12 +1048,13 @@ main {
 
 .main-block-landing {
   /* height: calc(100vh - 200px); */
-  height:calc(100vh - 15%);
+  height:calc(100vh - 15vh);
+  /* height: 100vh; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 20%;
+  /* margin-top: 22%; */
 }
 
 .txt-container-landing {
@@ -1308,7 +1311,7 @@ main {
   }
 
   .main-block-landing {
-    height: calc(100vh -10px);
+    height: calc(100vh -10vh);
     /* height: 100vh; */
     /* background-color: red; */
     width: 100%;
