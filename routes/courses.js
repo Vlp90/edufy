@@ -6,16 +6,62 @@ const Course = require("../models/Course.js");
 const upload = require("../config/cloudinary");
 
 router.get("/student", (req, res) => {
+  let dateSort = {
+    date: +1,
+  };
+  let filter = {};
+  console.log(req.query.from);
+
+  if (req.query.category) {
+    filter.category = req.query.category;
+  }
+  if (req.query.from && req.query.to) {
+    filter = {
+      $and: [
+        {
+          date: {
+            $gte: new Date(req.query.from).toISOString(),
+          },
+        },
+        {
+          date: {
+            $lte: new Date(req.query.to).toISOString(),
+          },
+        },
+      ],
+    };
+  }
+  if (req.query.category && req.query.from && req.query.to) {
+    // filter.category = req.query.category;
+    filter = {
+      $and: [
+        {
+          date: {
+            $gte: new Date(req.query.from).toISOString(),
+          },
+        },
+        {
+          date: {
+            $lte: new Date(req.query.to).toISOString(),
+          },
+        },
+        {
+          category: req.query.category,
+        },
+      ],
+    };
+  }
+
   Course.find({ participants: { $eq: req.session.currentUser._id } })
+    .sort(dateSort)
     .populate("category")
     .populate({ path: "participants", model: User })
     .populate({ path: "teacher", model: User })
     .then((dbRes) => {
-
       let errorMessage = null;
 
       if (dbRes.length < 1) {
-        errorMessage = "No items" 
+        errorMessage = "No items";
       }
       // User.findById(req.session.currentUser._id)
       //   .populate("courses")
@@ -55,20 +101,67 @@ router.get("/student", (req, res) => {
 });
 
 router.get("/prof", function (req, res, next) {
+  let dateSort = {
+    date: +1,
+  };
+  let filter = {};
+  console.log(req.query.from);
+
+  if (req.query.category) {
+    filter.category = req.query.category;
+  }
+  if (req.query.from && req.query.to) {
+    filter = {
+      $and: [
+        {
+          date: {
+            $gte: new Date(req.query.from).toISOString(),
+          },
+        },
+        {
+          date: {
+            $lte: new Date(req.query.to).toISOString(),
+          },
+        },
+      ],
+    };
+  }
+  if (req.query.category && req.query.from && req.query.to) {
+    // filter.category = req.query.category;
+    filter = {
+      $and: [
+        {
+          date: {
+            $gte: new Date(req.query.from).toISOString(),
+          },
+        },
+        {
+          date: {
+            $lte: new Date(req.query.to).toISOString(),
+          },
+        },
+        {
+          category: req.query.category,
+        },
+      ],
+    };
+  }
+
   Category.find()
     .then((dbResCat) => {
       Course.find({ teacher: { $eq: req.session.currentUser._id } })
+        .sort(dateSort)
         .populate({ path: "teacher", model: User })
         .populate("category")
         .populate("participants")
         .then((dbRes) => {
-
           let errorMessage = null;
 
           if (dbRes.length < 1) {
-            errorMessage = "No items" 
+            errorMessage = "No items";
           }
 
+          console.log(dbRes);
 
           res.render("prof-courses", {
             courses: dbRes,
@@ -76,6 +169,7 @@ router.get("/prof", function (req, res, next) {
             errorMessage: errorMessage,
           });
         })
+        // .sort({ date: -1 })
         .catch((err) => {
           console.log(err);
         });
