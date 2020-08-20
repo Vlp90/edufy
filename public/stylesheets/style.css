@@ -1047,13 +1047,13 @@ main {
 
 .main-block-landing {
   /* height: calc(100vh - 200px); */
-  height:calc(100vh - 15vh);
+  /* height:calc(100vh - 15vh); */
   /* height: 100vh; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  /* margin-top: 22%; */
+  margin-top: 25%;
 }
 
 .txt-container-landing {
